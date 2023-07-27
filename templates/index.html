@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Login</title>
+</head>
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url("/static/img.png");
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .submit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .login {
+            display: flex;
+            background-color: antiquewhite;
+            padding: 16px;
+            border-radius: 2px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        input[type="submit"] {
+            margin-top: 16px;
+            align-self: center;
+        }
+
+    </style>
+    <div class="container">
+        <div class="login">
+            <form action="/recommendations" method="post">
+                <div class="column">
+                    <h1>Revolutionizing the way you shop.</h1>
+                    <label for="customer_id">Customer ID:</label>
+                    <input type="text" name="customer_id" id="customer_id"> 
+                </div>
+                <div class="submit"><input type="submit" value="Login" ></div>
+                <!--<input type="submit" value="Login" >!-->
+            </form>
+        </div>
+    </div>
+</body>
+</html>
