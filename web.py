@@ -95,7 +95,8 @@ def show_recommended():
         #customer_segmentation = calculate(request.form['customer_id'])
         test = calculate(request.form['customer_id'])
         return render_template("recommendations.html", recommendations=test)
-    return "404: Invalid Customer ID"
+    #return "404: Invalid Customer ID"
+    return render_template("error.html")
 
 
 #root.mainloop()

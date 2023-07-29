@@ -24,9 +24,9 @@
         .login {
             display: flex;
             flex-direction: column;
-            background-color: antiquewhite;
             margin: 4px;
             justify-content: space-between;
+            background-color:transparent !important;
         }
         .row {
             display: flex;
@@ -34,21 +34,24 @@
             justify-content: flex-start;
         }
         table td {
-            border: 1px solid black;
+            border: 2px solid rgb(78, 68, 42);
+            background-color: #E5DDB8;
         }
     </style>
     <div class="container">
         <div class="login">
             <!--<p>Customer Segmentation: {{ customer_segmentation }}</p>!-->
-            <h4 style="margin-bottom: 16px;">These are some item categories recommendations for you:</h4>
-            <table>
+            <h1 style="margin-bottom: 20px;">These are some item categories recommendations for you:</h1>
+            <table style="width:80%">
+                <tbody style="font-size: 28px";>
                     {% for item in recommendations %}
                     <tr><td>{{ item }}</td></tr>
                     {% endfor %}
+                </tbody>
             </table>
         </div>
         <div>
-            <img src="/static/sample.png" alt="products" style="height: 500px; width: auto; margin-left: 128px;"><br>
+            <img src="/static/products.png" alt="products" style="height: 500auto; width: auto; margin-left: 128px;"><br>
         </div>
     </div>
 </body>
