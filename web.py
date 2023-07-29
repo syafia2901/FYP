@@ -28,12 +28,9 @@ def index():
 @app.route("/recommendations", methods=["POST"])
 def show_recommended():
     print(request.form['customer_id'])
-    #customer_segmentation = calculate(request.form['customer_id'])
     if request.form['customer_id'] != "" and validateLogin(request.form['customer_id']):
-        #customer_segmentation = calculate(request.form['customer_id'])
         test = calculate(request.form['customer_id'])
         return render_template("recommendations.html", recommendations=test)
-    #return "404: Invalid Customer ID"
     return render_template("error.html")
 
 

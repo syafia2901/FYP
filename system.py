@@ -31,8 +31,6 @@ def calculate(id):
     customer_indx = customer_ID.index(i)
     customer_indx
 
-    #customer_segmentation = df_test.loc[df_test['customer_id'] == n, 'customer_segmentation'].values[0]
-    #return customer_segmentation
 
     correlation_customer_ID = correlation_matrix[customer_indx]
     correlation_customer_ID.shape
@@ -46,7 +44,8 @@ def calculate(id):
     list2=Recommend[0:10]
 
     result = df_test[df_test['customer_id'].isin(list2)]
-    #print('These are some item categories recommendations for you,\n', result['product_category_name_english'].sample(n=5))
+
+    #customer_segmentation = "Sample customer_segmentation for customer ID: " + str(id)
     return  [category for index, category in result['product_category_name_english'].sample(n=5).items()]  
 
 
