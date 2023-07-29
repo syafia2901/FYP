@@ -31,6 +31,9 @@ def calculate(id):
     customer_indx = customer_ID.index(i)
     customer_indx
 
+    #customer_segmentation = df_test.loc[df_test['customer_id'] == n, 'customer_segmentation'].values[0]
+    #return customer_segmentation
+
     correlation_customer_ID = correlation_matrix[customer_indx]
     correlation_customer_ID.shape
 
